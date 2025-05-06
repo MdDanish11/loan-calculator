@@ -3,14 +3,15 @@ import { Box, Typography, Link } from '@mui/material';
 const About = () => {
   return (
     <Box sx={{ p: 4 }}>
-        <Typography paragraph>
+        
+      <Typography variant="h4" gutterBottom>
+        About This App
+      </Typography>
+      <Typography paragraph>
         Live demo available at: {' '}
         <Link href="https://loan-calculator11.netlify.app/" target="_blank">
         https://loan-calculator11.netlify.app/
         </Link>
-      </Typography>
-      <Typography variant="h4" gutterBottom>
-        About This App
       </Typography>
       <Typography paragraph>
         This Loan Calculator is a modern web application that helps users calculate
