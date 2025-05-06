@@ -5,6 +5,8 @@ import Header from './Header';
 import ErrorBoundary from './ErrorBoundary';
 
 const Layout = ({ children }) => {
+  const { theme } = useAppContext(); // Get theme from context
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -13,7 +15,7 @@ const Layout = ({ children }) => {
         flexDirection: 'column',
         minHeight: '100vh',
         width: '100vw',
-        overflowX: 'hidden' // Prevent horizontal scroll
+        overflowX: 'hidden'
       }}>
         <Header />
         <Container
@@ -21,7 +23,7 @@ const Layout = ({ children }) => {
           sx={{
             flex: 1,
             py: 2,
-            px: { xs: 1, sm: 2 } // Mobile-friendly padding
+            px: { xs: 1, sm: 2 }
           }}
         >
           {children}
