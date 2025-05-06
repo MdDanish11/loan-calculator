@@ -3,6 +3,12 @@ import { Box, Typography, Link } from '@mui/material';
 const About = () => {
   return (
     <Box sx={{ p: 4 }}>
+        <Typography paragraph>
+        Live demo available at: {' '}
+        <Link href="https://loan-calculator11.netlify.app/" target="_blank">
+        https://loan-calculator11.netlify.app/
+        </Link>
+      </Typography>
       <Typography variant="h4" gutterBottom>
         About This App
       </Typography>
@@ -21,12 +27,7 @@ const About = () => {
         <li><Typography>Dark/Light mode toggle</Typography></li>
         <li><Typography>Responsive design for all devices</Typography></li>
       </ul>
-      <Typography paragraph>
-        Live demo available at: {' '}
-        <Link href="https://your-deployment-url.com" target="_blank">
-          https://your-deployment-url.com
-        </Link>
-      </Typography>
+      
     </Box>
   );
 };
