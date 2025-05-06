@@ -5,21 +5,27 @@ import Header from './Header';
 import ErrorBoundary from './ErrorBoundary';
 
 const Layout = ({ children }) => {
-  const { theme } = useAppContext();
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <ErrorBoundary>
-        <Box sx={{ minHeight: '100vh', bgcolor: 'background.default' }}>
-          <Header />
-          <Container maxWidth="lg" sx={{ py: 4 }}>
-            {children}
-          </Container>
-        </Box>
-      </ErrorBoundary>
+      <Box sx={{ 
+        display: 'flex', 
+        flexDirection: 'column',
+        minHeight: '100vh'
+      }}>
+        <Header />
+        <Container 
+          component="main"
+          sx={{ 
+            flex: 1,
+            py: { xs: 2, sm: 4 }, // Responsive padding
+            px: { xs: 1, sm: 2 } 
+          }}
+        >
+          {children}
+        </Container>
+      </Box>
     </ThemeProvider>
   );
 };
-
 export default Layout;

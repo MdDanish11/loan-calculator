@@ -10,12 +10,14 @@ const ThemeToggle = () => {
       <IconButton 
         onClick={toggleTheme} 
         color="inherit"
-        sx={{ ml: 1 }}
+        sx={{ 
+          ml: { xs: 0, sm: 1 }, // Adjust spacing for mobile
+          fontSize: { xs: '1rem', sm: '1.25rem' } // Responsive icon size
+        }}
       >
         {darkMode ? <Brightness7 /> : <Brightness4 />}
       </IconButton>
     </Tooltip>
   );
 };
-
 export default ThemeToggle;
