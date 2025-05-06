@@ -1,12 +1,50 @@
-# React + Vite
+#  Loan Calculator Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive loan calculator that helps you estimate monthly payments (EMI), view amortization schedules, and convert currencies in real-time.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+ **Live Demo:** [https://loan-calculator11.netlify.app/](https://loan-calculator11.netlify.app/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+##  Features
+
+- **EMI Calculation**: Instantly calculates monthly payments
+- **Amortization Schedule**: Detailed breakdown of principal/interest per month
+- **Currency Conversion**: Real-time exchange rates for 7+ currencies
+- **Dark/Light Mode**: Easy on the eyes at any time
+- **Mobile-Friendly**: Works perfectly on all devices
+- **Error Handling**: Graceful error pages when things go wrong
+
+##  How to Use
+
+1. **Enter Loan Details**:
+   - Loan Amount (e.g., $100,000)
+   - Interest Rate (e.g., 8.5%)
+   - Loan Term (e.g., 5 years)
+
+2. **Click "Calculate"** to see your:
+   - Monthly EMI payment
+   - Full payment schedule
+
+3. **Bonus Features**:
+   - Switch currencies using the dropdown
+   - Toggle dark/light mode in the top-right
+   - Convert any amount in the currency converter
+
+##  Installation (For Developers)
+
+Want to run this locally? Here's how:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/MdDanish11/loan-calculator.git
+
+# 2. Navigate to project
+cd loan-calculator
+
+# 3. Install dependencies
+npm install
+
+# 4. Start development server
+npm run dev
