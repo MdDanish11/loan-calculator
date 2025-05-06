@@ -1,16 +1,16 @@
-import { useState } from 'react';
-import { 
-  TextField, 
-  Button, 
-  Select, 
-  MenuItem, 
-  FormControl, 
-  InputLabel, 
-  Grid 
-} from '@mui/material';
-import { useAppContext } from '../context/AppContext';
+import { useState } from "react";
+import {
+  TextField,
+  Button,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
+  Grid,
+} from "@mui/material";
+import { useAppContext } from "../context/AppContext";
 
-const CalculatorForm = ({ 
+const CalculatorForm = ({
   loanAmount,
   setLoanAmount,
   interestRate,
@@ -18,17 +18,24 @@ const CalculatorForm = ({
   loanTerm,
   setLoanTerm,
   onCalculate,
-  onReset 
+  onReset,
 }) => {
   const { currency, setCurrency } = useAppContext();
 
-  const CURRENCIES = [
-    'USD', 'EUR', 'GBP', 'JPY', 'CAD', 'AUD', 'INR'
-  ];
+  const CURRENCIES = ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "INR"];
 
   return (
     <Grid container spacing={3}>
       <Grid item xs={12} sm={6} md={3}>
+        <TextField
+          fullWidth
+          sx={{
+            mb: 2,
+            "& .MuiInputBase-root": {
+              fontSize: { xs: "0.9rem", sm: "1rem" },
+            },
+          }}
+        />
         <TextField
           label="Loan Amount"
           type="number"
