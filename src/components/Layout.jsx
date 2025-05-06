@@ -9,17 +9,19 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Box sx={{ 
-        display: 'flex', 
+        display: 'flex',
         flexDirection: 'column',
-        minHeight: '100vh'
+        minHeight: '100vh',
+        width: '100vw',
+        overflowX: 'hidden' // Prevent horizontal scroll
       }}>
         <Header />
-        <Container 
-          component="main"
-          sx={{ 
+        <Container
+          maxWidth="lg"
+          sx={{
             flex: 1,
-            py: { xs: 2, sm: 4 }, // Responsive padding
-            px: { xs: 1, sm: 2 } 
+            py: 2,
+            px: { xs: 1, sm: 2 } // Mobile-friendly padding
           }}
         >
           {children}
