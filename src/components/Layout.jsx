@@ -2,34 +2,24 @@ import { useAppContext } from '../context/AppContext';
 import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline, Container, Box } from '@mui/material';
 import Header from './Header';
-import ErrorBoundary from './ErrorBoundary';
+import ErrorBoundary from './MyErrorBoundary'; // Updated import
 
 const Layout = ({ children }) => {
-  const { theme } = useAppContext(); // Get theme from context
+  const { theme } = useAppContext();
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Box sx={{ 
-        display: 'flex',
-        flexDirection: 'column',
-        minHeight: '100vh',
-        width: '100vw',
-        overflowX: 'hidden'
-      }}>
-        <Header />
-        <Container
-          maxWidth="lg"
-          sx={{
-            flex: 1,
-            py: 2,
-            px: { xs: 1, sm: 2 }
-          }}
-        >
-          {children}
-        </Container>
-      </Box>
+      <ErrorBoundary>
+        <Box sx={{ minHeight: '100vh', bgcolor: 'background.default' }}>
+          <Header />
+          <Container maxWidth="lg" sx={{ py: 4 }}>
+            {children}
+          </Container>
+        </Box>
+      </ErrorBoundary>
     </ThemeProvider>
   );
 };
+
 export default Layout;
