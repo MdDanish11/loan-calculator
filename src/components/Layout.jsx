@@ -2,7 +2,7 @@ import { useAppContext } from '../context/AppContext';
 import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline, Container, Box } from '@mui/material';
 import Header from './Header';
-import ErrorBoundary from './MyErrorBoundary'; // Updated import
+import ErrorBoundary from './ErrorBoundary';
 
 const Layout = ({ children }) => {
   const { theme } = useAppContext();

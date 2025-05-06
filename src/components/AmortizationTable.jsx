@@ -11,7 +11,6 @@ const AmortizationTable = ({ data }) => {
       <Typography variant="h6" gutterBottom sx={{ p: 2 }}>
         Amortization Schedule
       </Typography>
-      
       <Table>
         <TableHead>
           <TableRow>
